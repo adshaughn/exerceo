@@ -25,21 +25,20 @@
 import re
 
 
-class Solution:
-    def lengthOfLastWord(self, s: str) -> int:
-        # step 1 - remove trailing spaces from string
+def lengthOfLastWord(s) -> int:
+    # step 1 - remove trailing spaces from string
 
-        cleaned_s = s.strip()
+    cleaned_s = s.strip()
 
-        # step 2 - use regex to isolate last word
-        last_word = re.search("[A-Za-z]+$", cleaned_s)
+    # step 2 - use regex to isolate last word
+    last_word = re.search("[A-Za-z]+$", cleaned_s)
 
-        lwo = last_word.group()
+    lwo = last_word.group()
 
-        # step 3 - get lenght of last word
+    # step 3 - get lenght of last word
 
-        length_lw = len(lwo)
+    length_lw = len(lwo)
 
-        # step 4 - return length
+    # step 4 - return length
 
-        return length_lw
+    return length_lw
